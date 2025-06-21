@@ -1,0 +1,143 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap";
+
+body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    background: transparent;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.hud-wrapper {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    gap: 0.8vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    padding: 0.4vw;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+}
+
+.hud-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.8vw;
+    height: 1.8vw;
+    background-color: rgba(27, 21, 21, 0.747);
+    border-radius: 5px;
+    font-size: 0.9vw;
+    color: white;
+    flex-shrink: 0;
+}
+
+.id-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2vw;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.8vw;
+    padding: 0 0.5vw;
+    min-width: 0.6vw;
+    transition: width 0.3s ease;
+}
+
+.id-number {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.hud-bar {
+    width: 5.5vw;
+    height: 1.6vh;
+    background-color: rgba(0, 0, 0, 0.45);
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0 0 0.08vw black;
+    overflow: hidden;
+    position: relative;
+}
+
+.hud-bar-inside {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 0.6vw;
+    color: white;
+    position: absolute;
+    transition: width 0.4s ease-in-out;
+    overflow: hidden;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    padding: 0 0.15vw;
+    white-space: nowrap;
+}
+
+.hud-health-inside {
+    background-color: rgb(200, 0, 0);
+    width: 40%;
+    justify-content: flex-start;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+.hud-armor-inside {
+    background-color: rgb(0, 100, 200);
+    width: 50%;
+    left: auto;
+    right: 0;
+    justify-content: flex-end;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    direction: rtl;
+}
+
+.hud-number {
+    font-size: 0.5vw;
+    pointer-events: none;
+}
+
+.armor-reverse {
+    flex-direction: row-reverse;
+}
+
+.armor-bar {
+    direction: rtl;
+}
+
+.hud-health-icon,
+.hud-armor-icon {
+    color: white;
+}
+
+@keyframes progress {
+    from {
+        width: 0;
+    }
+}
